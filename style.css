@@ -1,0 +1,88 @@
+* {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  position: relative;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.logo {
+  width: 140px;
+  height: auto;
+  display: block;
+}
+
+header {
+  height: 112px;
+  background-color: #ff8000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 48px;
+}
+
+.burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.burger_line {
+  width: 32px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+.site-footer {
+  height: 112px;
+  background-color: #ff8000; /* oranžová jako header */
+  border-top: 2px solid #e06b00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* celý hlavní řádek pod headerem */
+.content_wrapper {
+  display: flex;              /* položí content a basket vedle sebe */
+  align-items: flex-start;    /* nahoře zarovnané */
+  justify-content: center;    /* bezpečné centrování obsahu, ať to není nalepené */
+  gap: 16px;                  /* mezera mezi levým a pravým blokem */
+  padding: 24px 48px;         /* vnitřní odsazení od okraje stránky */
+}
+
+/* levý sloupec */
+.content {
+  flex-grow: 1;               /* roztáhni se, zabírej zbytek místa */
+  min-width: 0;               /* prevence horizontálního scrollu na malých šířkách */
+  background-color: #f5f5f5;  /* dočasně světle šedá jen pro vizuální kontrolu */
+  min-height: 400px;          /* aby to bylo vidět i když je prázdné */
+  border: 1px solid #ccc;     /* jen rámek pro orientaci */
+  padding: 16px;
+}
+
+/* pravý sloupec (košík) */
+.basket_wrapper {
+  width: 300px;               /* pevná šířka košíku = důležité */
+  background-color: #fff7f0;  /* jen vizuální placeholder */
+  border: 1px solid #ccc;
+  min-height: 200px;
+  padding: 16px;
+}
